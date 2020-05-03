@@ -1,7 +1,46 @@
 # react boilerplate
 
-Similar to create react app (CRA), except hand rolled configuration.
+Similar to create react app (CRA), except hand rolled configuration. Some useful features in a JavaScript development environment that I'll configure:
 
+- linting
+- code formatting
+- bundling and packing
+- ES6+ support
+- local web server
+
+# react router dom
+
+The `HomePage` component features a react-router-dom `Link` component:
+
+    <Link to="about" className="btn btn-primary btn-lg">
+      Learn more
+    </Link>
+
+To bootstrap react router:
+
+- Import `BrowserRouter` with `import { BrowserRouter } from "react-router-dom";`
+- Wrap the top level component with `<BrowserRouter></BrowserRouter>` tags
+
+## Active link styling
+
+When a link is selected, its common to style the active link based on the route. `NavLink` makes this easy with the `activeStyle` property.
+
+    const activeStyle = { color: "#F15B2A" };
+      return (
+        <nav>
+          <NavLink to="/" activeStyle={activeStyle} exact>
+
+## 404 not founds
+
+Using the `Switch` component from react router, can declare that only a single route should ever match.
+
+Very much like a switch statement in a programming lang, this will fall through until a route is satisified. By registering a `PageNotFound` component as the last route in the switch with no `path` criteria, ensures this will be the default route if no other routes are hit.
+
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/about" component={AboutPage} />
+      <Route component={PageNotFound} />
+    </Switch>
 
 ### Production Dependencies
 
