@@ -1,92 +1,78 @@
 const courses = [
   {
     id: 1,
-    title: "Securing React Apps with Auth0",
-    slug: "react-auth0-authentication-security",
+    title: "The C Programming Language",
+    slug: "clang",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 2,
-    title: "React: The Big Picture",
-    slug: "react-big-picture",
+    title: "Unix Programmer's Manual",
+    slug: "unix-man",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 3,
-    title: "Creating Reusable React Components",
-    slug: "react-creating-reusable-components",
+    title: "The Evolution of the Unix Time-sharing System",
+    slug: "time-sharing",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 4,
-    title: "Building a JavaScript Development Environment",
-    slug: "javascript-development-environment",
+    title: "A Stream Input/Output System",
+    slug: "streamio",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 5,
-    title: "Building Applications with React and Redux",
-    slug: "react-redux-react-router-es6",
+    title: "Interprocess Communication in the Ninth Edition Unix System",
+    slug: "ipc-ninth",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 6,
-    title: "Building Applications in React and Flux",
-    slug: "react-flux-building-applications",
+    title: "VAX over 20+ years",
+    slug: "vax",
     authorId: 1,
-    category: "JavaScript"
+    category: "Unix",
   },
   {
     id: 7,
-    title: "Clean Code: Writing Code for Humans",
-    slug: "writing-clean-code-humans",
+    title: "Resurrection of two primeval C compilers from 1972-73",
+    slug: "compilers",
     authorId: 1,
-    category: "Software Practices"
+    category: "Unix",
   },
   {
     id: 8,
-    title: "Architecting Applications for the Real World",
-    slug: "architecting-applications-dotnet",
-    authorId: 1,
-    category: "Software Architecture"
+    title: "The Unix Programming Environment",
+    slug: "unix-programming",
+    authorId: 2,
+    category: "Unix",
   },
-  {
-    id: 9,
-    title: "Becoming an Outlier: Reprogramming the Developer Mind",
-    slug: "career-reboot-for-developer-mind",
-    authorId: 1,
-    category: "Career"
-  },
-  {
-    id: 10,
-    title: "Web Component Fundamentals",
-    slug: "web-components-shadow-dom",
-    authorId: 1,
-    category: "HTML5"
-  }
 ];
 
 const authors = [
-  { id: 1, name: "Cory House" },
-  { id: 2, name: "Scott Allen" },
-  { id: 3, name: "Dan Wahlin" }
+  { id: 1, name: "Bill Gates" },
+  { id: 2, name: "Rob Pike" },
+  { id: 3, name: "Dennis Ritchie" },
 ];
 
 const newCourse = {
   id: null,
   title: "",
   authorId: null,
-  category: ""
+  category: "",
 };
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
   newCourse,
   courses,
-  authors
+  authors,
 };
