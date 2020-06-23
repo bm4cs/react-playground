@@ -58,9 +58,9 @@ const courses = [
 ];
 
 const authors = [
-  { id: 1, name: "Bill Gates" },
+  { id: 1, name: "Dennis Ritchie" },
   { id: 2, name: "Rob Pike" },
-  { id: 3, name: "Dennis Ritchie" },
+  { id: 3, name: "Ken Thompson" },
 ];
 
 const newCourse = {
