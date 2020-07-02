@@ -6,6 +6,8 @@ import Header from "./common/Header.js";
 import PageNotFound from "./PageNotFound.js";
 import CoursesPage from "./courses/CoursesPage.js";
 import ManageCoursePage from "./courses/ManageCoursePage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
         <Route component={PageNotFound} />
       </Switch>
+      <ToastContainer autoClose={3000} />
     </div>
   );
 }
