@@ -5,6 +5,10 @@ function actionTypeEndsInSuccess(type) {
   return type.substring(type.length - 8) === "_SUCCESS";
 }
 
+function actionTypeEndsInError(type) {
+  return type.substring(type.length - 6) === "_ERROR";
+}
+
 export default function apiCallStatusReducer(
   state = initialState.apiCallsInProgress,
   action
@@ -12,6 +16,8 @@ export default function apiCallStatusReducer(
   if (action.type == types.BEGIN_API_CALL) {
     return state + 1;
   } else if (actionTypeEndsInSuccess(action.type)) {
+    return state - 1;
+  } else if (actionTypeEndsInError(action.type)) {
     return state - 1;
   }
 

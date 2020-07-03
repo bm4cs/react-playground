@@ -29,6 +29,11 @@ class CoursesPage extends React.Component {
     }
   }
 
+  handleDeleteCourse = (course) => {
+    //TODO
+    //toast
+  };
+
   render() {
     return (
       <>
@@ -91,6 +96,7 @@ function mapDispatchToProps(dispatch) {
     actions: {
       loadCourses: bindActionCreators(courseActions.loadCourses, dispatch),
       loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
+      deleteCourse: bindActionCreators(courseActions.deleteCourse, dispatch),
     },
   };
 }
