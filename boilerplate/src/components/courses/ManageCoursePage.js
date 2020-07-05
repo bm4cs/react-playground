@@ -8,7 +8,7 @@ import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-function ManageCoursesPage({
+function ManageCoursePage({
   courses,
   authors,
   loadCourses,
@@ -87,7 +87,7 @@ function ManageCoursesPage({
 }
 
 // Keep ESLint happy, define the implicit `dispatch` function in props
-ManageCoursesPage.propTypes = {
+ManageCoursePage.propTypes = {
   course: PropTypes.object.isRequired,
   courses: PropTypes.array.isRequired,
   authors: PropTypes.array.isRequired,
@@ -126,4 +126,4 @@ const mapDispatchToProps = {
 
 // mapDispatchToProps is injected automatically if omitted
 // a dispatch() will automatically be added to `props`
-export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
